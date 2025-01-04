@@ -10,9 +10,9 @@ import { logger } from '@/src/utils/logger'
 import { getRegistryIcons } from '@/src/utils/registry'
 import { spinner } from '@/src/utils/spinner'
 import { updateDependencies } from '@/src/utils/updaters/update-dependencies'
-import fg from 'fast-glob'
 import path from 'pathe'
 import prompts from 'prompts'
+import { glob } from 'tinyglobby'
 import { Project, ScriptKind, SyntaxKind } from 'ts-morph'
 
 export async function migrateIcons(config: Config) {
@@ -24,7 +24,7 @@ export async function migrateIcons(config: Config) {
 
   const uiPath = config.resolvedPaths.ui
   const [files, registryIcons] = await Promise.all([
-    fg('**/*.{js,ts,jsx,tsx}', {
+    glob('**/*.{js,ts,jsx,tsx}', {
       cwd: uiPath,
     }),
     getRegistryIcons(),

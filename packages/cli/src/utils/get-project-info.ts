@@ -10,9 +10,9 @@ import {
   resolveConfigPaths,
 } from '@/src/utils/get-config'
 import { getPackageInfo } from '@/src/utils/get-package-info'
-import fg from 'fast-glob'
 import fs from 'fs-extra'
 import path from 'pathe'
+import { glob } from 'tinyglobby'
 import { z } from 'zod'
 
 export interface ProjectInfo {
@@ -46,7 +46,7 @@ export async function getProjectInfo(cwd: string): Promise<ProjectInfo | null> {
     aliasPrefix,
     packageJson,
   ] = await Promise.all([
-    fg.glob('**/{nuxt,vite,astro}.config.*|composer.json', {
+    glob('**/{nuxt,vite,astro}.config.*|composer.json', {
       cwd,
       deep: 3,
       ignore: PROJECT_SHARED_IGNORE,
@@ -95,7 +95,7 @@ export async function getProjectInfo(cwd: string): Promise<ProjectInfo | null> {
 }
 
 export async function getTailwindCssFile(cwd: string) {
-  const files = await fg.glob(['**/*.css', '**/*.scss'], {
+  const files = await glob(['**/*.css', '**/*.scss'], {
     cwd,
     deep: 5,
     ignore: PROJECT_SHARED_IGNORE,
@@ -117,7 +117,7 @@ export async function getTailwindCssFile(cwd: string) {
 }
 
 export async function getTailwindConfigFile(cwd: string) {
-  const files = await fg.glob('tailwind.config.*', {
+  const files = await glob('tailwind.config.*', {
     cwd,
     deep: 3,
     ignore: PROJECT_SHARED_IGNORE,
@@ -155,7 +155,7 @@ export async function getTsConfigAliasPrefix(cwd: string) {
 }
 
 export async function isTypeScriptProject(cwd: string) {
-  const files = await fg.glob('tsconfig.*', {
+  const files = await glob('tsconfig.*', {
     cwd,
     deep: 1,
     ignore: PROJECT_SHARED_IGNORE,
