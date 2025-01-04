@@ -11,13 +11,13 @@ import { TooltipProvider } from '@/registry/new-york/ui/tooltip'
 import { useConfigStore } from '@/stores/config'
 import { useMagicKeys, useToggle } from '@vueuse/core'
 
+import { Content, useData, useRoute, useRouter } from 'vitepress'
+import { onMounted, ref, watch } from 'vue'
 import MoonIcon from '~icons/lucide/moon'
 import SunIcon from '~icons/lucide/sun'
 import Circle from '~icons/radix-icons/circle'
 import File from '~icons/radix-icons/file'
 import GithubLogoIcon from '~icons/radix-icons/github-logo'
-import { Content, useData, useRoute, useRouter } from 'vitepress'
-import { onMounted, ref, watch } from 'vue'
 import CodeConfigCustomizer from '../components/CodeConfigCustomizer.vue'
 import Kbd from '../components/Kbd.vue'
 import Logo from '../components/Logo.vue'
@@ -191,7 +191,7 @@ watch(() => $route.path, (n) => {
             <span class="inline-block ml-1">
               Ported to Vue by
               <a
-                href="https://twitter.com/unovue"
+                href="https://github.com/unovue"
                 target="_blank"
                 class="font-medium underline underline-offset-4"
               >
