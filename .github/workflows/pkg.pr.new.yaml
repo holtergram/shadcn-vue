@@ -4,14 +4,11 @@ permissions:
   pull-requests: write
 
 on:
-  push:
-    branches:
-      - dev
-    path-ignore:
-      - 'test/**'
-      - '*.md'
   pull_request:
+  push:
     types: [opened, synchronize, labeled]
+    tags:
+      - "!**"
     paths:
       - packages/cli/**
     path-ignore:
