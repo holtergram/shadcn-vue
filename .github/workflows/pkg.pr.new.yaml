@@ -5,13 +5,11 @@ permissions:
 
 on:
   push:
-    branches:
-      - dev
     path-ignore:
       - 'test/**'
       - '*.md'
   pull_request:
-    types: [opened, synchronize, labeled]
+    types: [opened, reopened, synchronize, labeled]
     paths:
       - packages/cli/**
     path-ignore:
