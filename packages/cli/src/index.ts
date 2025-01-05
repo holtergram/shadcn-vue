@@ -16,7 +16,7 @@ async function main() {
 
   const program = new Command()
     .name('shadcn-vue')
-    .description('add components and dependencies to your project.')
+    .description('add components and dependencies to your project')
     .version(
       packageInfo.version || '1.0.0',
       '-v, --version',
