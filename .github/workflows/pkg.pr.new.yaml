@@ -4,19 +4,16 @@ permissions:
   pull-requests: write
 
 on:
-  push:
-    branches:
-      - dev
-    path-ignore:
-      - 'test/**'
-      - '*.md'
   pull_request:
+  push:
     types: [opened, synchronize, labeled]
     paths:
       - packages/cli/**
     path-ignore:
       - 'test/**'
       - '*.md'
+    tags-ignore:
+      - '*'
 
 jobs:
   preview:
@@ -39,4 +36,4 @@ jobs:
         working-directory: ./packages/cli
         run: pnpm build
 
-      - run: pnpm dlx pkg-pr-new publish --compact --pnpm ./packages/cli
+      - run: pnpm dlx pkg-pr-new publish --compact --no-template --pnpm ./packages/cli
