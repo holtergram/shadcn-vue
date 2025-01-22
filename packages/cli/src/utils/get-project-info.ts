@@ -11,6 +11,7 @@ import {
 } from '@/src/utils/get-config'
 import { getPackageInfo } from '@/src/utils/get-package-info'
 import fs from 'fs-extra'
+import { parseTsconfig } from 'get-tsconfig'
 import path from 'pathe'
 import { glob } from 'tinyglobby'
 import { z } from 'zod'
@@ -134,10 +135,13 @@ export async function getTsConfigAliasPrefix(cwd: string) {
   const isTypescript = await isTypeScriptProject(cwd)
   const tsconfigType = isTypescript ? 'tsconfig.json' : 'jsconfig.json'
 
-  const tsConfig = await getTSConfig(cwd, tsconfigType)
+  const tsConfig = getTSConfig(cwd, tsconfigType)
+  const parsedTsConfig = parseTsconfig(tsConfig.path)
+
+  const aliasPaths = parsedTsConfig.compilerOptions?.paths ?? {}
 
   // This assume that the first alias is the prefix.
-  for (const [alias, paths] of Object.entries(tsConfig.path)) {
+  for (const [alias, paths] of Object.entries(aliasPaths)) {
     if (
       paths.includes('./*')
       || paths.includes('./src/*')
@@ -151,7 +155,7 @@ export async function getTsConfigAliasPrefix(cwd: string) {
   }
 
   // Use the first alias as the prefix.
-  return Object.keys(tsConfig?.path)?.[0].replace(/\/\*$/, '') ?? null
+  return Object.keys(aliasPaths)?.[0]?.replace(/\/\*$/, '') ?? null
 }
 
 export async function isTypeScriptProject(cwd: string) {

@@ -251,16 +251,16 @@ export async function registryResolveItemsTree(
       names.unshift('index')
     }
 
-    const registryDependencies: string[] = []
+    const registryDependencies: Set<string> = new Set()
     for (const name of names) {
       const itemRegistryDependencies = await resolveRegistryDependencies(
         name,
         config,
       )
-      registryDependencies.push(...itemRegistryDependencies)
+      itemRegistryDependencies.forEach(dep => registryDependencies.add(dep))
     }
 
-    const uniqueRegistryDependencies = Array.from(new Set(registryDependencies))
+    const uniqueRegistryDependencies = Array.from(registryDependencies)
     const result = await fetchRegistry(uniqueRegistryDependencies)
     const payload = z.array(registryItemSchema).parse(result)
 
@@ -299,12 +299,8 @@ export async function registryResolveItemsTree(
     })
 
     return registryResolvedItemsTreeSchema.parse({
-      dependencies: deepmerge.all(
-        payload.map(item => item.dependencies ?? []),
-      ),
-      devDependencies: deepmerge.all(
-        payload.map(item => item.devDependencies ?? []),
-      ),
+      dependencies: Array.from(new Set(payload.flatMap(item => item.dependencies ?? []))),
+      devDependencies: Array.from(new Set(payload.flatMap(item => item.devDependencies ?? []))),
       files: deepmerge.all(payload.map(item => item.files ?? [])),
       tailwind,
       cssVars,
