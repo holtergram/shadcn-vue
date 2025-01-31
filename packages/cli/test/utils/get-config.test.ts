@@ -73,6 +73,11 @@ it('get config', async () => {
         '../fixtures/config-partial',
         './components',
       ),
+      composables: path.resolve(
+        __dirname,
+        '../fixtures/config-partial',
+        './composables',
+      ),
       ui: path.resolve(
         __dirname,
         '../fixtures/config-partial',
@@ -102,6 +107,7 @@ it('get config', async () => {
     },
     aliases: {
       components: '~/components',
+      composables: '~/composables',
       utils: '~/lib/utils',
       lib: '~/lib',
       ui: '~/ui',
@@ -123,6 +129,11 @@ it('get config', async () => {
         __dirname,
         '../fixtures/config-full',
         './src/components',
+      ),
+      composables: path.resolve(
+        __dirname,
+        '../fixtures/config-full',
+        './src/composables',
       ),
       ui: path.resolve(__dirname, '../fixtures/config-full', './src/ui'),
       lib: path.resolve(__dirname, '../fixtures/config-full', './src/lib'),
@@ -166,6 +177,11 @@ it('get config', async () => {
         __dirname,
         '../fixtures/config-js',
         './components',
+      ),
+      composables: path.resolve(
+        __dirname,
+        '../fixtures/config-js',
+        './composables',
       ),
       ui: path.resolve(__dirname, '../fixtures/config-js', './components/ui'),
       utils: path.resolve(__dirname, '../fixtures/config-js', './lib/utils'),
