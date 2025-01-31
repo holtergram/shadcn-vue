@@ -185,14 +185,14 @@ Import alias for `lib` functions such as `format-date` or `generate-id`.
 }
 ```
 
-### aliases.hooks
+### aliases.composables
 
-Import alias for `hooks` such as `use-media-query` or `use-toast`.
+Import alias for `composables` such as `useMediaQuery` or `useToast`.
 
 ```json title="components.json"
 {
   "aliases": {
-    "hooks": "@/hooks"
+    "composables": "@/composables"
   }
 }
 ```

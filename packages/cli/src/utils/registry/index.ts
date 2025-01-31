@@ -223,9 +223,9 @@ export function getRegistryItemFileTargetPath(
     return config.resolvedPaths.components
   }
 
-  // if (file.type === 'registry:hook') {
-  //   return config.resolvedPaths.hooks
-  // }
+  if (file.type === 'registry:hook') {
+    return config.resolvedPaths.composables
+  }
 
   // TODO: we put this in components for now.
   // We should move this to pages as per framework.

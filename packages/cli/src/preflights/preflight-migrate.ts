@@ -56,7 +56,7 @@ export async function preFlightMigrate(
     )
     logger.error(
       `Learn more at ${highlighter.info(
-        'https://ui.shadcn.com/docs/components-json',
+        'https://shadcn-vue.com/docs/components-json',
       )}.`,
     )
     logger.break()

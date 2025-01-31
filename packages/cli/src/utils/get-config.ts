@@ -34,10 +34,10 @@ export const rawConfigSchema = z
     }),
     aliases: z.object({
       components: z.string(),
+      composables: z.string().optional(),
       utils: z.string(),
       ui: z.string().optional(),
       lib: z.string().optional(),
-      // hooks: z.string().optional(),
     }),
     iconLibrary: z.string().optional(),
   })
@@ -52,8 +52,8 @@ export const configSchema = rawConfigSchema.extend({
     tailwindCss: z.string(),
     utils: z.string(),
     components: z.string(),
+    composables: z.string(),
     lib: z.string(),
-    // hooks: z.string(),
     ui: z.string(),
   }),
 })
@@ -114,14 +114,14 @@ export async function resolveConfigPaths(cwd: string, config: RawConfig) {
           (await resolveImport(config.aliases.utils, tsConfig)) ?? cwd,
           '..',
         ),
-      // hooks: config.aliases.hooks
-      //   ? await resolveImport(config.aliases.hooks, tsConfig)
-      //   : path.resolve(
-      //     (await resolveImport(config.aliases.components, tsConfig))
-      //     ?? cwd,
-      //     '..',
-      //     'hooks',
-      //   ),
+      composables: config.aliases.composables
+        ? await resolveImport(config.aliases.composables, tsConfig)
+        : path.resolve(
+          (await resolveImport(config.aliases.components, tsConfig))
+          ?? cwd,
+          '..',
+          'composables',
+        ),
     },
   })
 }
