@@ -373,12 +373,17 @@ export const Index: Record<string, any> = {
 `
 
   for (const style of styles) {
+    const itemSet = new Set<string>()
     index += `  "${style.name}": {`
 
     // Build style index.
     for (const item of registry) {
       if (item.type !== 'registry:block')
         continue
+
+      if (itemSet.has(item.name))
+        continue
+      itemSet.add(item.name)
 
       const resolveFiles = item.files?.map(
         file =>
