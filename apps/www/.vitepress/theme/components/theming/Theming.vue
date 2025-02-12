@@ -52,7 +52,7 @@ const range = ref({
         </div>
       </div>
       <div class="space-y-4 lg:col-span-6 xl:col-span-5 xl:space-y-4">
-        <div class="hidden gap-1 sm:grid-cols-[280px_1fr] md:grid">
+        <div class="hidden gap-1 sm:grid-cols-[250px_1fr] md:grid">
           <Card class="max-w-[280px]">
             <RangeCalendar v-model="range" />
           </Card>

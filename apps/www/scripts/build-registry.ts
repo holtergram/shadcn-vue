@@ -53,10 +53,15 @@ export const Index: Record<string, any> = {
 `
 
   for (const style of styles) {
+    const itemSet = new Set<string>()
     index += `  "${style.name}": {`
 
     // Build style index.
     for (const item of registry) {
+      if (itemSet.has(item.name))
+        continue
+      itemSet.add(item.name)
+
       const resolveFiles = item.files?.map(
         file =>
           `registry/${style.name}/${
@@ -959,6 +964,8 @@ try {
   const content = await crawlContent()
   const result = registrySchema.safeParse([...registry, ...content])
 
+  // Local check
+  // TODO: remove
   await writeFile(
     path.join(REGISTRY_PATH, 'temp.json'),
     JSON.stringify(result.data ?? '', null, 2),
