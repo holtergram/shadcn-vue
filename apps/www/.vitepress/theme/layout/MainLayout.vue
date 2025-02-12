@@ -69,14 +69,6 @@ function handleSelectLink(item: NavItem) {
 
   isOpen.value = false
 }
-
-watch(() => $route.path, (n) => {
-  if (document.startViewTransition) {
-    document.startViewTransition(() => {
-      console.log('soft navigating to: ', n)
-    })
-  }
-})
 </script>
 
 <template>

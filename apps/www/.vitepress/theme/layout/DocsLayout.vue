@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { cn } from '@/lib/utils'
+import { Code2, ExternalLink } from 'lucide-vue-next'
 import { useData, useRoute } from 'vitepress'
-import RadixIconsCode from '~icons/radix-icons/code'
-import RadixIconsExternalLink from '~icons/radix-icons/external-link'
 import DocsBreadcrumb from '../components/DocsBreadcrumb.vue'
 import EditLink from '../components/EditLink.vue'
 import TableOfContent from '../components/TableOfContent.vue'
@@ -77,15 +76,16 @@ const sourceLink = 'https://github.com/unovue/shadcn-vue/tree/dev/'
 
           <div v-if="frontmatter.docs || frontmatter.source || frontmatter.primitive" class="flex items-center space-x-2 pt-4">
             <a v-if="frontmatter.docs" :href="frontmatter.docs" target="_blank" class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 select-none border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">
-              <RadixIconsExternalLink class="mr-1" />
+              <ExternalLink class="ml-1 h-3 w-3" />
               Docs
             </a>
             <a v-if="frontmatter.source" :href="sourceLink + frontmatter.source" target="_blank" class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 select-none border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">
-              <RadixIconsCode class="mr-1" />
               Component Source
+              <Code2 class="ml-1 h-3 w-3" />
             </a>
             <a v-if="frontmatter.primitive" :href="frontmatter.primitive" target="_blank" class="inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 select-none border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">
-              Primitive API Reference
+              API Reference
+              <ExternalLink class="ml-1 h-3 w-3" />
             </a>
           </div>
 

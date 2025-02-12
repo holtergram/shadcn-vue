@@ -248,11 +248,6 @@ pre code .line {
 	@apply !inline-block leading-[--vp-code-line-height];
 }
 
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation-duration: 0.3s;
-}
-
 .steps:first-child > h3:first-child {
   @apply mt-0;
 }

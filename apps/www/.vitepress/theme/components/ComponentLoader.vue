@@ -4,6 +4,10 @@ import { defineAsyncComponent } from 'vue'
 import { Index } from '../../../__registry__'
 import Spinner from './Spinner.vue'
 
+defineOptions({
+  inheritAttrs: false,
+})
+
 const props = defineProps<{
   name: string
   typeName?: 'example' | 'block'
@@ -21,7 +25,7 @@ const Component = defineAsyncComponent({
 
 <template>
   <Suspense>
-    <Component :is="Component" />
+    <Component :is="Component" v-bind="$attrs" />
 
     <template #fallback>
       <div class="w-full h-screen flex items-center justify-center">
