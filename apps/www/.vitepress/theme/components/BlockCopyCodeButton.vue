@@ -24,7 +24,7 @@ const { copy, copied } = useClipboard({ source: code })
     <TooltipTrigger as-child>
       <Button
         size="icon"
-        variant="outline"
+        variant="ghost"
         class="h-7 w-7 [&_svg]:size-3.5"
         @click="copy()"
       >

@@ -111,7 +111,10 @@ watch(radius, (radius) => {
       </PageAction>
     </PageHeader>
   </div>
-  <section class="container py-6">
-    <slot />
+
+  <section class="container-wrapper">
+    <div class="container py-6">
+      <slot />
+    </div>
   </section>
 </template>

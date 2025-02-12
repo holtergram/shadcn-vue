@@ -21,9 +21,14 @@ const DEPENDENCIES = new Map<string, string[]>([
 //   ['v-calendar', 'v-calendar@next'],
 // ])
 const REGISTRY_DEPENDENCY = '@/'
+const CATEGORIES = ['authentication', 'sidebar', 'login', 'dashboard']
 
 type ArrayItem<T> = T extends Array<infer X> ? X : never
 type RegistryItem = ArrayItem<Registry>
+
+function getCategory(text: string) {
+  return CATEGORIES.find(category => category === text.replace(/\d+/g, '').toLowerCase()) || undefined
+}
 
 export async function buildRegistry() {
   const registryRootPath = resolve('src', 'registry')
@@ -151,6 +156,7 @@ async function crawlBlock(rootPath: string) {
       files: [file],
       registryDependencies: Array.from(registryDependencies),
       dependencies: Array.from(dependencies),
+      category: getCategory(name),
     })
   }
 
@@ -273,6 +279,7 @@ async function buildBlockRegistry(blockPath: string, blockName: string) {
     name: blockName,
     registryDependencies: Array.from(registryDependencies),
     dependencies: Array.from(dependencies),
+    category: getCategory(blockName),
   } satisfies RegistryItem
 }
 

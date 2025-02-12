@@ -5084,7 +5084,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Authentication01.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "authentication",
       subcategory: ""
     },
     "Authentication02": {
@@ -5099,7 +5099,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Authentication02.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "authentication",
       subcategory: ""
     },
     "Authentication03": {
@@ -5114,7 +5114,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Authentication03.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "authentication",
       subcategory: ""
     },
     "Authentication04": {
@@ -5129,7 +5129,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Authentication04.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "authentication",
       subcategory: ""
     },
     "Dashboard01": {
@@ -5144,7 +5144,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Dashboard01.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "Dashboard02": {
@@ -5159,7 +5159,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Dashboard02.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "Dashboard03": {
@@ -5174,7 +5174,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Dashboard03.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "Dashboard04": {
@@ -5189,7 +5189,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Dashboard04.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "Dashboard05": {
@@ -5204,7 +5204,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Dashboard05.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "Dashboard06": {
@@ -5219,7 +5219,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Dashboard06.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "Dashboard07": {
@@ -5234,7 +5234,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Dashboard07.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "DemoSidebar": {
@@ -5433,7 +5433,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Login01/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "login",
       subcategory: ""
     },
     "Sidebar01": {
@@ -5460,7 +5460,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar01/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar02": {
@@ -5487,7 +5487,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar02/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar03": {
@@ -5506,7 +5506,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar03/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar04": {
@@ -5525,7 +5525,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar04/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar05": {
@@ -5548,7 +5548,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar05/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar06": {
@@ -5575,7 +5575,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar06/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar07": {
@@ -5610,7 +5610,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar07/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar08": {
@@ -5645,7 +5645,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar08/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar09": {
@@ -5668,7 +5668,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar09/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar10": {
@@ -5711,7 +5711,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar10/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar11": {
@@ -5734,7 +5734,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar11/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar12": {
@@ -5765,7 +5765,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar12/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar13": {
@@ -5784,7 +5784,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar13/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar14": {
@@ -5803,7 +5803,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar14/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar15": {
@@ -5862,7 +5862,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar15/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "accordion": {
@@ -10930,7 +10930,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Authentication01.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "authentication",
       subcategory: ""
     },
     "Authentication02": {
@@ -10945,7 +10945,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Authentication02.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "authentication",
       subcategory: ""
     },
     "Authentication03": {
@@ -10960,7 +10960,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Authentication03.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "authentication",
       subcategory: ""
     },
     "Authentication04": {
@@ -10975,7 +10975,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Authentication04.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "authentication",
       subcategory: ""
     },
     "Dashboard01": {
@@ -10990,7 +10990,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Dashboard01.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "Dashboard02": {
@@ -11005,7 +11005,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Dashboard02.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "Dashboard03": {
@@ -11020,7 +11020,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Dashboard03.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "Dashboard04": {
@@ -11035,7 +11035,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Dashboard04.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "Dashboard05": {
@@ -11050,7 +11050,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Dashboard05.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "Dashboard06": {
@@ -11065,7 +11065,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Dashboard06.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "Dashboard07": {
@@ -11080,7 +11080,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Dashboard07.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "DemoSidebar": {
@@ -11279,7 +11279,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Login01/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "login",
       subcategory: ""
     },
     "Sidebar01": {
@@ -11306,7 +11306,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar01/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar02": {
@@ -11333,7 +11333,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar02/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar03": {
@@ -11352,7 +11352,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar03/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar04": {
@@ -11371,7 +11371,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar04/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar05": {
@@ -11394,7 +11394,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar05/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar06": {
@@ -11421,7 +11421,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar06/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar07": {
@@ -11456,7 +11456,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar07/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar08": {
@@ -11491,7 +11491,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar08/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar09": {
@@ -11514,7 +11514,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar09/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar10": {
@@ -11557,7 +11557,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar10/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar11": {
@@ -11580,7 +11580,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar11/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar12": {
@@ -11611,7 +11611,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar12/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar13": {
@@ -11630,7 +11630,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar13/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar14": {
@@ -11649,7 +11649,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar14/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar15": {
@@ -11708,7 +11708,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Sidebar15/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
   },  "default": {
@@ -16792,7 +16792,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Authentication01.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "authentication",
       subcategory: ""
     },
     "Authentication02": {
@@ -16807,7 +16807,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Authentication02.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "authentication",
       subcategory: ""
     },
     "Authentication03": {
@@ -16822,7 +16822,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Authentication03.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "authentication",
       subcategory: ""
     },
     "Authentication04": {
@@ -16837,7 +16837,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Authentication04.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "authentication",
       subcategory: ""
     },
     "Dashboard01": {
@@ -16852,7 +16852,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Dashboard01.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "Dashboard02": {
@@ -16867,7 +16867,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Dashboard02.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "Dashboard03": {
@@ -16882,7 +16882,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Dashboard03.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "Dashboard04": {
@@ -16897,7 +16897,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Dashboard04.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "Dashboard05": {
@@ -16912,7 +16912,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Dashboard05.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "Dashboard06": {
@@ -16927,7 +16927,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Dashboard06.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "Dashboard07": {
@@ -16942,7 +16942,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Dashboard07.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "DemoSidebar": {
@@ -17141,7 +17141,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Login01/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "login",
       subcategory: ""
     },
     "Sidebar01": {
@@ -17168,7 +17168,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar01/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar02": {
@@ -17195,7 +17195,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar02/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar03": {
@@ -17214,7 +17214,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar03/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar04": {
@@ -17233,7 +17233,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar04/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar05": {
@@ -17256,7 +17256,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar05/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar06": {
@@ -17283,7 +17283,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar06/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar07": {
@@ -17318,7 +17318,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar07/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar08": {
@@ -17353,7 +17353,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar08/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar09": {
@@ -17376,7 +17376,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar09/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar10": {
@@ -17419,7 +17419,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar10/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar11": {
@@ -17442,7 +17442,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar11/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar12": {
@@ -17473,7 +17473,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar12/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar13": {
@@ -17492,7 +17492,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar13/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar14": {
@@ -17511,7 +17511,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar14/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar15": {
@@ -17570,7 +17570,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar15/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "accordion": {
@@ -22638,7 +22638,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Authentication01.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "authentication",
       subcategory: ""
     },
     "Authentication02": {
@@ -22653,7 +22653,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Authentication02.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "authentication",
       subcategory: ""
     },
     "Authentication03": {
@@ -22668,7 +22668,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Authentication03.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "authentication",
       subcategory: ""
     },
     "Authentication04": {
@@ -22683,7 +22683,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Authentication04.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "authentication",
       subcategory: ""
     },
     "Dashboard01": {
@@ -22698,7 +22698,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Dashboard01.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "Dashboard02": {
@@ -22713,7 +22713,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Dashboard02.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "Dashboard03": {
@@ -22728,7 +22728,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Dashboard03.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "Dashboard04": {
@@ -22743,7 +22743,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Dashboard04.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "Dashboard05": {
@@ -22758,7 +22758,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Dashboard05.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "Dashboard06": {
@@ -22773,7 +22773,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Dashboard06.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "Dashboard07": {
@@ -22788,7 +22788,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Dashboard07.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "dashboard",
       subcategory: ""
     },
     "DemoSidebar": {
@@ -22987,7 +22987,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Login01/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "login",
       subcategory: ""
     },
     "Sidebar01": {
@@ -23014,7 +23014,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar01/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar02": {
@@ -23041,7 +23041,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar02/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar03": {
@@ -23060,7 +23060,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar03/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar04": {
@@ -23079,7 +23079,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar04/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar05": {
@@ -23102,7 +23102,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar05/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar06": {
@@ -23129,7 +23129,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar06/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar07": {
@@ -23164,7 +23164,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar07/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar08": {
@@ -23199,7 +23199,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar08/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar09": {
@@ -23222,7 +23222,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar09/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar10": {
@@ -23265,7 +23265,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar10/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar11": {
@@ -23288,7 +23288,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar11/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar12": {
@@ -23319,7 +23319,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar12/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar13": {
@@ -23338,7 +23338,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar13/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar14": {
@@ -23357,7 +23357,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar14/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
     "Sidebar15": {
@@ -23416,7 +23416,7 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Sidebar15/page.vue").then((m) => m.default),
       source: "",
-      category: "",
+      category: "sidebar",
       subcategory: ""
     },
   },

@@ -38,22 +38,30 @@ import LandingExample from './LandingExample.vue'
       </PageAction>
     </PageHeader>
 
-    <div class="container py-6">
-      <ExamplesNav class="[&>a:first-child]:text-primary" />
+    <div class="border-grid border-b">
+      <div class="container-wrapper">
+        <div class="container py-4">
+          <ExamplesNav />
+        </div>
+      </div>
+    </div>
 
-      <section class="space-y-8 overflow-hidden rounded-lg border-2 border-primary dark:border-muted md:hidden">
-        <VPImage
-          alt="Mail"
-          width="1280"
-          height="866" class="block" :image="{
-            dark: '/examples/mail-dark.png',
-            light: '/examples/mail-light.png',
-          }"
-        />
-      </section>
-      <section class="hidden md:block">
-        <LandingExample />
-      </section>
+    <div class="container-wrapper">
+      <div class="container py-6">
+        <section class="space-y-8 overflow-hidden rounded-lg border-2 border-primary dark:border-muted md:hidden">
+          <VPImage
+            alt="Mail"
+            width="1280"
+            height="866" class="block" :image="{
+              dark: '/examples/mail-dark.png',
+              light: '/examples/mail-light.png',
+            }"
+          />
+        </section>
+        <section class="hidden md:block">
+          <LandingExample />
+        </section>
+      </div>
     </div>
   </div>
 </template>

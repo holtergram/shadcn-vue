@@ -4,7 +4,7 @@ description: A composable, themeable and customizable sidebar component.
 ---
 
 <figure class="flex flex-col gap-4">
-  <BlockPreview url="/blocks/renderer?name=Sidebar07&styles=new-york" ></BlockPreview>
+  <BlockPreview url="/block-renderer?name=Sidebar07&styles=new-york" ></BlockPreview>
   <figcaption class="text-center text-sm text-gray-500">
     A sidebar that collapses to icons.
   </figcaption>

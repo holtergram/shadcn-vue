@@ -36,13 +36,20 @@ import PageHeaderHeading from '../components/PageHeaderHeading.vue'
       </PageAction>
     </PageHeader>
 
-    <div class="container py-6">
-      <section>
-        <ExamplesNav class="[&>a:first-child]:text-primary" />
+    <div class="border-grid border-b">
+      <div class="container-wrapper">
+        <div class="container py-4">
+          <ExamplesNav />
+        </div>
+      </div>
+    </div>
+
+    <div class="container-wrapper">
+      <div class="container py-6">
         <div class="overflow-hidden rounded-[0.5rem] border bg-background shadow">
           <slot />
         </div>
-      </section>
+      </div>
     </div>
   </div>
 </template>

@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { Button } from '@/registry/new-york/ui/button'
+import { useData } from 'vitepress'
+import { computed } from 'vue'
 import Announcement from '../components/Announcement.vue'
 import PageAction from '../components/PageAction.vue'
 
@@ -8,12 +10,26 @@ import PageHeaderDescription from '../components/PageHeaderDescription.vue'
 
 import PageHeaderHeading from '../components/PageHeaderHeading.vue'
 import BlockContainer from './BlockContainer.vue'
+import BlocksNav from './BlocksNav.vue'
 
-const blocks = ['Sidebar01', 'Sidebar02', 'Sidebar03', 'Sidebar04', 'Sidebar05', 'Sidebar06', 'Sidebar07', 'Sidebar08', 'Sidebar09', 'Sidebar10', 'Sidebar11', 'Sidebar12', 'Sidebar13', 'Sidebar14', 'Sidebar15', 'Login01']
+const FEATURED_BLOCKS = ['Sidebar07', 'Sidebar03', 'Login03', 'Login04']
+
+// params is a Vue ref
+const { params } = useData()
+
+const blocks = computed(() => {
+  if (params.value === undefined) {
+    return FEATURED_BLOCKS
+  }
+  else {
+    return params.value.blocks ?? []
+  }
+})
+console.log(params)
 </script>
 
 <template>
-  <PageHeader class="page-header pb-8">
+  <PageHeader class="page-header">
     <Announcement />
     <PageHeaderHeading>Building Blocks for the Web</PageHeaderHeading>
     <PageHeaderDescription>
@@ -35,7 +51,19 @@ const blocks = ['Sidebar01', 'Sidebar02', 'Sidebar03', 'Sidebar04', 'Sidebar05',
     </PageAction>
   </PageHeader>
 
-  <section id="blocks" class="grid scroll-mt-24 gap-24 lg:gap-48 container py-6">
-    <BlockContainer v-for="block in blocks" :key="block" :name="block" />
+  <section id="blocks" class="border-grid scroll-mt-24 border-b">
+    <div class="container-wrapper">
+      <div class="container flex items-center py-4">
+        <BlocksNav />
+      </div>
+    </div>
   </section>
+
+  <div class="container-wrapper flex-1">
+    <div>
+      <div v-for="block in blocks" :key="block" class="border-grid container border-b py-8 first:pt-6 last:border-b-0 md:py-12">
+        <BlockContainer :name="block" />
+      </div>
+    </div>
+  </div>
 </template>

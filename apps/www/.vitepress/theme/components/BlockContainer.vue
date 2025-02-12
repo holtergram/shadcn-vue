@@ -42,7 +42,7 @@ const iframeURL = computed(() => {
   if (import.meta.env.SSR)
     return ''
 
-  const url = new URL(`${window.location.origin}/blocks/renderer`)
+  const url = new URL(`${window.location.origin}/block-renderer`)
   url.searchParams.append('name', props.name)
   url.searchParams.append('styles', 'new-york')
   url.searchParams.append('containerClass', metadata.containerClass ?? '')

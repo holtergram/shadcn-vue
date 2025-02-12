@@ -9,8 +9,8 @@ const props = defineProps<{
   typeName?: 'example' | 'block'
 }>()
 const { style } = useConfigStore()
-
 const styleIndex = Index[style.value]
+
 const componentRegistry = styleIndex[props.name]
 
 const Component = defineAsyncComponent({

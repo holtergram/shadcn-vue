@@ -5,14 +5,11 @@ import { cn } from '@/lib/utils'
 </script>
 
 <template>
-  <section
-    :class="cn(
-      'flex flex-col items-start gap-2 border-b border-border/40 py-8 dark:border-border md:py-10 lg:py-12',
-      $attrs.class ?? '',
-    )"
-  >
-    <div class="container">
-      <slot />
+  <section :class="cn('border-grid border-b', $attrs.class ?? '')">
+    <div class="container-wrapper">
+      <div class="container flex flex-col items-start gap-1 py-8 md:py-10 lg:py-12">
+        <slot />
+      </div>
     </div>
   </section>
 </template>

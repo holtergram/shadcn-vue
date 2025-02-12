@@ -2430,7 +2430,7 @@
     "files": [
       {
         "path": "ui/sidebar/Sidebar.vue",
-        "content": "<script setup lang=\"ts\">\nimport type { SidebarProps } from '.'\nimport { cn } from '@/lib/utils'\nimport { Sheet, SheetContent } from '@/registry/new-york/ui/sheet'\nimport { SIDEBAR_WIDTH_MOBILE, useSidebar } from './utils'\n\ndefineOptions({\n  inheritAttrs: false,\n})\n\nconst props = withDefaults(defineProps<SidebarProps>(), {\n  side: 'left',\n  variant: 'sidebar',\n  collapsible: 'offcanvas',\n})\n\nconst { isMobile, state, openMobile, setOpenMobile } = useSidebar()\n</script>\n\n<template>\n  <div\n    v-if=\"collapsible === 'none'\"\n    :class=\"cn('flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground', props.class)\"\n    v-bind=\"$attrs\"\n  >\n    <slot />\n  </div>\n\n  <Sheet v-else-if=\"isMobile\" :open=\"openMobile\" v-bind=\"$attrs\" @update:open=\"setOpenMobile\">\n    <SheetContent\n      data-sidebar=\"sidebar\"\n      data-mobile=\"true\"\n      :side=\"side\"\n      class=\"w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden\"\n      :style=\"{\n        '--sidebar-width': SIDEBAR_WIDTH_MOBILE,\n      }\"\n    >\n      <div class=\"flex h-full w-full flex-col\">\n        <slot />\n      </div>\n    </SheetContent>\n  </Sheet>\n\n  <div\n    v-else class=\"group peer hidden md:block\"\n    :data-state=\"state\"\n    :data-collapsible=\"state === 'collapsed' ? collapsible : ''\"\n    :data-variant=\"variant\"\n    :data-side=\"side\"\n  >\n    <!-- This is what handles the sidebar gap on desktop  -->\n    <div\n      :class=\"cn(\n        'duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear',\n        'group-data-[collapsible=offcanvas]:w-0',\n        'group-data-[side=right]:rotate-180',\n        variant === 'floating' || variant === 'inset'\n          ? 'group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4))]'\n          : 'group-data-[collapsible=icon]:w-[--sidebar-width-icon]',\n      )\"\n    />\n    <div\n      :class=\"cn(\n        'duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear md:flex',\n        side === 'left'\n          ? 'left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]'\n          : 'right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]',\n        // Adjust the padding for floating and inset variants.\n        variant === 'floating' || variant === 'inset'\n          ? 'p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]'\n          : 'group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l',\n        props.class,\n      )\"\n      v-bind=\"$attrs\"\n    >\n      <div\n        data-sidebar=\"sidebar\"\n        class=\"flex h-full w-full flex-col bg-sidebar group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-sidebar-border group-data-[variant=floating]:shadow\"\n      >\n        <slot />\n      </div>\n    </div>\n  </div>\n</template>\n",
+        "content": "<script setup lang=\"ts\">\nimport type { SidebarProps } from '.'\nimport { cn } from '@/lib/utils'\nimport { Sheet, SheetContent } from '@/registry/new-york/ui/sheet'\nimport { SIDEBAR_WIDTH_MOBILE, useSidebar } from './utils'\n\ndefineOptions({\n  inheritAttrs: false,\n})\n\nconst props = withDefaults(defineProps<SidebarProps>(), {\n  side: 'left',\n  variant: 'sidebar',\n  collapsible: 'offcanvas',\n})\n\nconst { isMobile, state, openMobile, setOpenMobile } = useSidebar()\n</script>\n\n<template>\n  <div\n    v-if=\"collapsible === 'none'\"\n    :class=\"cn('flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground', props.class)\"\n    v-bind=\"$attrs\"\n  >\n    <slot />\n  </div>\n\n  <Sheet v-else-if=\"isMobile\" :open=\"openMobile\" v-bind=\"$attrs\" @update:open=\"setOpenMobile\">\n    <SheetContent\n      data-sidebar=\"sidebar\"\n      data-mobile=\"true\"\n      :side=\"side\"\n      class=\"w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden\"\n      :style=\"{\n        '--sidebar-width': SIDEBAR_WIDTH_MOBILE,\n      }\"\n    >\n      <div class=\"flex h-full w-full flex-col\">\n        <slot />\n      </div>\n    </SheetContent>\n  </Sheet>\n\n  <div\n    v-else class=\"group peer hidden md:block\"\n    :data-state=\"state\"\n    :data-collapsible=\"state === 'collapsed' ? collapsible : ''\"\n    :data-variant=\"variant\"\n    :data-side=\"side\"\n  >\n    <!-- This is what handles the sidebar gap on desktop  -->\n    <div\n      :class=\"cn(\n        'duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear',\n        'group-data-[collapsible=offcanvas]:w-0',\n        'group-data-[side=right]:rotate-180',\n        variant === 'floating' || variant === 'inset'\n          ? 'group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4))]'\n          : 'group-data-[collapsible=icon]:w-[--sidebar-width-icon]',\n      )\"\n    />\n    <div\n      :class=\"cn(\n        'duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear md:flex',\n        side === 'left'\n          ? 'left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]'\n          : 'right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]',\n        // Adjust the padding for floating and inset variants.\n        variant === 'floating' || variant === 'inset'\n          ? 'p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]'\n          : 'group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l',\n        props.class,\n      )\"\n      v-bind=\"$attrs\"\n    >\n      <div\n        data-sidebar=\"sidebar\"\n        class=\"flex h-full w-full flex-col text-sidebar-foreground bg-sidebar group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-sidebar-border group-data-[variant=floating]:shadow\"\n      >\n        <slot />\n      </div>\n    </div>\n  </div>\n</template>\n",
         "type": "registry:ui",
         "target": ""
       },
@@ -2550,7 +2550,7 @@
       },
       {
         "path": "ui/sidebar/SidebarProvider.vue",
-        "content": "<script setup lang=\"ts\">\nimport { cn } from '@/lib/utils'\nimport { useEventListener, useMediaQuery, useVModel } from '@vueuse/core'\nimport { TooltipProvider } from 'reka-ui'\nimport { computed, type HTMLAttributes, type Ref, ref } from 'vue'\nimport { provideSidebarContext, SIDEBAR_COOKIE_MAX_AGE, SIDEBAR_COOKIE_NAME, SIDEBAR_KEYBOARD_SHORTCUT, SIDEBAR_WIDTH, SIDEBAR_WIDTH_ICON } from './utils'\n\nconst props = withDefaults(defineProps<{\n  defaultOpen?: boolean\n  open?: boolean\n  class?: HTMLAttributes['class']\n}>(), {\n  defaultOpen: true,\n  open: undefined,\n})\n\nconst emits = defineEmits<{\n  'update:open': [open: boolean]\n}>()\n\nconst isMobile = useMediaQuery('(max-width: 768px)')\nconst openMobile = ref(false)\n\nconst open = useVModel(props, 'open', emits, {\n  defaultValue: props.defaultOpen ?? false,\n  passive: (props.open === undefined) as false,\n}) as Ref<boolean>\n\nfunction setOpen(value: boolean) {\n  open.value = value // emits('update:open', value)\n\n  // This sets the cookie to keep the sidebar state.\n  document.cookie = `${SIDEBAR_COOKIE_NAME}=${open.value}; path=/; max-age=${SIDEBAR_COOKIE_MAX_AGE}`\n}\n\nfunction setOpenMobile(value: boolean) {\n  openMobile.value = value\n}\n\n// Helper to toggle the sidebar.\nfunction toggleSidebar() {\n  return isMobile.value ? setOpenMobile(!openMobile.value) : setOpen(!open.value)\n}\n\nuseEventListener('keydown', (event: KeyboardEvent) => {\n  if (event.key === SIDEBAR_KEYBOARD_SHORTCUT && (event.metaKey || event.ctrlKey)) {\n    event.preventDefault()\n    toggleSidebar()\n  }\n})\n\n// We add a state so that we can do data-state=\"expanded\" or \"collapsed\".\n// This makes it easier to style the sidebar with Tailwind classes.\nconst state = computed(() => open.value ? 'expanded' : 'collapsed')\n\nprovideSidebarContext({\n  state,\n  open,\n  setOpen,\n  isMobile,\n  openMobile,\n  setOpenMobile,\n  toggleSidebar,\n})\n</script>\n\n<template>\n  <TooltipProvider :delay-duration=\"0\">\n    <div\n      :style=\"{\n        '--sidebar-width': SIDEBAR_WIDTH,\n        '--sidebar-width-icon': SIDEBAR_WIDTH_ICON,\n      }\"\n      :class=\"cn('group/sidebar-wrapper flex min-h-svh w-full text-sidebar-foreground has-[[data-variant=inset]]:bg-sidebar', props.class)\"\n      v-bind=\"$attrs\"\n    >\n      <slot />\n    </div>\n  </TooltipProvider>\n</template>\n",
+        "content": "<script setup lang=\"ts\">\nimport { cn } from '@/lib/utils'\nimport { useEventListener, useMediaQuery, useVModel } from '@vueuse/core'\nimport { TooltipProvider } from 'reka-ui'\nimport { computed, type HTMLAttributes, type Ref, ref } from 'vue'\nimport { provideSidebarContext, SIDEBAR_COOKIE_MAX_AGE, SIDEBAR_COOKIE_NAME, SIDEBAR_KEYBOARD_SHORTCUT, SIDEBAR_WIDTH, SIDEBAR_WIDTH_ICON } from './utils'\n\nconst props = withDefaults(defineProps<{\n  defaultOpen?: boolean\n  open?: boolean\n  class?: HTMLAttributes['class']\n}>(), {\n  defaultOpen: true,\n  open: undefined,\n})\n\nconst emits = defineEmits<{\n  'update:open': [open: boolean]\n}>()\n\nconst isMobile = useMediaQuery('(max-width: 768px)')\nconst openMobile = ref(false)\n\nconst open = useVModel(props, 'open', emits, {\n  defaultValue: props.defaultOpen ?? false,\n  passive: (props.open === undefined) as false,\n}) as Ref<boolean>\n\nfunction setOpen(value: boolean) {\n  open.value = value // emits('update:open', value)\n\n  // This sets the cookie to keep the sidebar state.\n  document.cookie = `${SIDEBAR_COOKIE_NAME}=${open.value}; path=/; max-age=${SIDEBAR_COOKIE_MAX_AGE}`\n}\n\nfunction setOpenMobile(value: boolean) {\n  openMobile.value = value\n}\n\n// Helper to toggle the sidebar.\nfunction toggleSidebar() {\n  return isMobile.value ? setOpenMobile(!openMobile.value) : setOpen(!open.value)\n}\n\nuseEventListener('keydown', (event: KeyboardEvent) => {\n  if (event.key === SIDEBAR_KEYBOARD_SHORTCUT && (event.metaKey || event.ctrlKey)) {\n    event.preventDefault()\n    toggleSidebar()\n  }\n})\n\n// We add a state so that we can do data-state=\"expanded\" or \"collapsed\".\n// This makes it easier to style the sidebar with Tailwind classes.\nconst state = computed(() => open.value ? 'expanded' : 'collapsed')\n\nprovideSidebarContext({\n  state,\n  open,\n  setOpen,\n  isMobile,\n  openMobile,\n  setOpenMobile,\n  toggleSidebar,\n})\n</script>\n\n<template>\n  <TooltipProvider :delay-duration=\"0\">\n    <div\n      :style=\"{\n        '--sidebar-width': SIDEBAR_WIDTH,\n        '--sidebar-width-icon': SIDEBAR_WIDTH_ICON,\n      }\"\n      :class=\"cn('group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar', props.class)\"\n      v-bind=\"$attrs\"\n    >\n      <slot />\n    </div>\n  </TooltipProvider>\n</template>\n",
         "type": "registry:ui",
         "target": ""
       },
@@ -6585,7 +6585,8 @@
         "type": "registry:block",
         "target": "pages/dashboard/index.vue"
       }
-    ]
+    ],
+    "category": "authentication"
   },
   {
     "name": "Authentication02",
@@ -6604,7 +6605,8 @@
         "type": "registry:block",
         "target": "pages/dashboard/index.vue"
       }
-    ]
+    ],
+    "category": "authentication"
   },
   {
     "name": "Authentication03",
@@ -6623,7 +6625,8 @@
         "type": "registry:block",
         "target": "pages/dashboard/index.vue"
       }
-    ]
+    ],
+    "category": "authentication"
   },
   {
     "name": "Authentication04",
@@ -6641,7 +6644,8 @@
         "type": "registry:block",
         "target": "pages/dashboard/index.vue"
       }
-    ]
+    ],
+    "category": "authentication"
   },
   {
     "name": "Dashboard01",
@@ -6664,7 +6668,8 @@
         "type": "registry:block",
         "target": "pages/dashboard/index.vue"
       }
-    ]
+    ],
+    "category": "dashboard"
   },
   {
     "name": "Dashboard02",
@@ -6685,7 +6690,8 @@
         "type": "registry:block",
         "target": "pages/dashboard/index.vue"
       }
-    ]
+    ],
+    "category": "dashboard"
   },
   {
     "name": "Dashboard03",
@@ -6708,7 +6714,8 @@
         "type": "registry:block",
         "target": "pages/dashboard/index.vue"
       }
-    ]
+    ],
+    "category": "dashboard"
   },
   {
     "name": "Dashboard04",
@@ -6729,7 +6736,8 @@
         "type": "registry:block",
         "target": "pages/dashboard/index.vue"
       }
-    ]
+    ],
+    "category": "dashboard"
   },
   {
     "name": "Dashboard05",
@@ -6758,7 +6766,8 @@
         "type": "registry:block",
         "target": "pages/dashboard/index.vue"
       }
-    ]
+    ],
+    "category": "dashboard"
   },
   {
     "name": "Dashboard06",
@@ -6783,7 +6792,8 @@
         "type": "registry:block",
         "target": "pages/dashboard/index.vue"
       }
-    ]
+    ],
+    "category": "dashboard"
   },
   {
     "name": "Dashboard07",
@@ -6811,7 +6821,8 @@
         "type": "registry:block",
         "target": "pages/dashboard/index.vue"
       }
-    ]
+    ],
+    "category": "dashboard"
   },
   {
     "name": "DemoSidebar",
@@ -7036,7 +7047,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "login"
   },
   {
     "name": "Sidebar01",
@@ -7074,7 +7086,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar02",
@@ -7113,7 +7126,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar03",
@@ -7137,7 +7151,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar04",
@@ -7161,7 +7176,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar05",
@@ -7193,7 +7209,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar06",
@@ -7234,7 +7251,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar07",
@@ -7285,7 +7303,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar08",
@@ -7336,7 +7355,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar09",
@@ -7370,7 +7390,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar10",
@@ -7434,7 +7455,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar11",
@@ -7465,7 +7487,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar12",
@@ -7511,7 +7534,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar13",
@@ -7536,7 +7560,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar14",
@@ -7559,7 +7584,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar15",
@@ -7647,7 +7673,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "accordion",
@@ -9892,7 +9919,7 @@
     "files": [
       {
         "path": "ui/sidebar/Sidebar.vue",
-        "content": "<script setup lang=\"ts\">\nimport type { HTMLAttributes } from 'vue'\nimport { cn } from '@/lib/utils'\nimport { Sheet, SheetContent } from '@/registry/default/ui/sheet'\nimport { SIDEBAR_WIDTH_MOBILE, useSidebar } from './utils'\n\ndefineOptions({\n  inheritAttrs: false,\n})\n\nconst props = withDefaults(defineProps<{\n  side?: 'left' | 'right'\n  variant?: 'sidebar' | 'floating' | 'inset'\n  collapsible?: 'offcanvas' | 'icon' | 'none'\n  class?: HTMLAttributes['class']\n}>(), {\n  side: 'left',\n  variant: 'sidebar',\n  collapsible: 'offcanvas',\n})\n\nconst { isMobile, state, openMobile, setOpenMobile } = useSidebar()\n</script>\n\n<template>\n  <div\n    v-if=\"collapsible === 'none'\"\n    :class=\"cn('flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground', props.class)\"\n    v-bind=\"$attrs\"\n  >\n    <slot />\n  </div>\n\n  <Sheet v-else-if=\"isMobile\" :open=\"openMobile\" v-bind=\"$attrs\" @update:open=\"setOpenMobile\">\n    <SheetContent\n      data-sidebar=\"sidebar\"\n      data-mobile=\"true\"\n      :side=\"side\"\n      class=\"w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden\"\n      :style=\"{\n        '--sidebar-width': SIDEBAR_WIDTH_MOBILE,\n      }\"\n    >\n      <div class=\"flex h-full w-full flex-col\">\n        <slot />\n      </div>\n    </SheetContent>\n  </Sheet>\n\n  <div\n    v-else class=\"group peer hidden md:block\"\n    :data-state=\"state\"\n    :data-collapsible=\"state === 'collapsed' ? collapsible : ''\"\n    :data-variant=\"variant\"\n    :data-side=\"side\"\n  >\n    <!-- This is what handles the sidebar gap on desktop  -->\n    <div\n      :class=\"cn(\n        'duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear',\n        'group-data-[collapsible=offcanvas]:w-0',\n        'group-data-[side=right]:rotate-180',\n        variant === 'floating' || variant === 'inset'\n          ? 'group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4))]'\n          : 'group-data-[collapsible=icon]:w-[--sidebar-width-icon]',\n      )\"\n    />\n    <div\n      :class=\"cn(\n        'duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear md:flex',\n        side === 'left'\n          ? 'left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]'\n          : 'right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]',\n        // Adjust the padding for floating and inset variants.\n        variant === 'floating' || variant === 'inset'\n          ? 'p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]'\n          : 'group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l',\n        props.class,\n      )\"\n      v-bind=\"$attrs\"\n    >\n      <div\n        data-sidebar=\"sidebar\"\n        class=\"flex h-full w-full flex-col bg-sidebar group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-sidebar-border group-data-[variant=floating]:shadow\"\n      >\n        <slot />\n      </div>\n    </div>\n  </div>\n</template>\n",
+        "content": "<script setup lang=\"ts\">\nimport type { SidebarProps } from '.'\nimport { cn } from '@/lib/utils'\nimport { Sheet, SheetContent } from '@/registry/default/ui/sheet'\nimport { SIDEBAR_WIDTH_MOBILE, useSidebar } from './utils'\n\ndefineOptions({\n  inheritAttrs: false,\n})\n\nconst props = withDefaults(defineProps<SidebarProps>(), {\n  side: 'left',\n  variant: 'sidebar',\n  collapsible: 'offcanvas',\n})\n\nconst { isMobile, state, openMobile, setOpenMobile } = useSidebar()\n</script>\n\n<template>\n  <div\n    v-if=\"collapsible === 'none'\"\n    :class=\"cn('flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground', props.class)\"\n    v-bind=\"$attrs\"\n  >\n    <slot />\n  </div>\n\n  <Sheet v-else-if=\"isMobile\" :open=\"openMobile\" v-bind=\"$attrs\" @update:open=\"setOpenMobile\">\n    <SheetContent\n      data-sidebar=\"sidebar\"\n      data-mobile=\"true\"\n      :side=\"side\"\n      class=\"w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden\"\n      :style=\"{\n        '--sidebar-width': SIDEBAR_WIDTH_MOBILE,\n      }\"\n    >\n      <div class=\"flex h-full w-full flex-col\">\n        <slot />\n      </div>\n    </SheetContent>\n  </Sheet>\n\n  <div\n    v-else class=\"group peer hidden md:block\"\n    :data-state=\"state\"\n    :data-collapsible=\"state === 'collapsed' ? collapsible : ''\"\n    :data-variant=\"variant\"\n    :data-side=\"side\"\n  >\n    <!-- This is what handles the sidebar gap on desktop  -->\n    <div\n      :class=\"cn(\n        'duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear',\n        'group-data-[collapsible=offcanvas]:w-0',\n        'group-data-[side=right]:rotate-180',\n        variant === 'floating' || variant === 'inset'\n          ? 'group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4))]'\n          : 'group-data-[collapsible=icon]:w-[--sidebar-width-icon]',\n      )\"\n    />\n    <div\n      :class=\"cn(\n        'duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear md:flex',\n        side === 'left'\n          ? 'left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]'\n          : 'right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]',\n        // Adjust the padding for floating and inset variants.\n        variant === 'floating' || variant === 'inset'\n          ? 'p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]'\n          : 'group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l',\n        props.class,\n      )\"\n      v-bind=\"$attrs\"\n    >\n      <div\n        data-sidebar=\"sidebar\"\n        class=\"flex h-full w-full flex-col text-sidebar-foreground bg-sidebar group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-sidebar-border group-data-[variant=floating]:shadow\"\n      >\n        <slot />\n      </div>\n    </div>\n  </div>\n</template>\n",
         "type": "registry:ui",
         "target": ""
       },
@@ -10012,7 +10039,7 @@
       },
       {
         "path": "ui/sidebar/SidebarProvider.vue",
-        "content": "<script setup lang=\"ts\">\nimport { cn } from '@/lib/utils'\nimport { useEventListener, useMediaQuery, useVModel } from '@vueuse/core'\nimport { TooltipProvider } from 'reka-ui'\nimport { computed, type HTMLAttributes, type Ref, ref } from 'vue'\nimport { provideSidebarContext, SIDEBAR_COOKIE_MAX_AGE, SIDEBAR_COOKIE_NAME, SIDEBAR_KEYBOARD_SHORTCUT, SIDEBAR_WIDTH, SIDEBAR_WIDTH_ICON } from './utils'\n\nconst props = withDefaults(defineProps<{\n  defaultOpen?: boolean\n  open?: boolean\n  class?: HTMLAttributes['class']\n}>(), {\n  defaultOpen: true,\n  open: undefined,\n})\n\nconst emits = defineEmits<{\n  'update:open': [open: boolean]\n}>()\n\nconst isMobile = useMediaQuery('(max-width: 768px)')\nconst openMobile = ref(false)\n\nconst open = useVModel(props, 'open', emits, {\n  defaultValue: props.defaultOpen ?? false,\n  passive: (props.open === undefined) as false,\n}) as Ref<boolean>\n\nfunction setOpen(value: boolean) {\n  open.value = value // emits('update:open', value)\n\n  // This sets the cookie to keep the sidebar state.\n  document.cookie = `${SIDEBAR_COOKIE_NAME}=${open.value}; path=/; max-age=${SIDEBAR_COOKIE_MAX_AGE}`\n}\n\nfunction setOpenMobile(value: boolean) {\n  openMobile.value = value\n}\n\n// Helper to toggle the sidebar.\nfunction toggleSidebar() {\n  return isMobile.value ? setOpenMobile(!openMobile.value) : setOpen(!open.value)\n}\n\nuseEventListener('keydown', (event: KeyboardEvent) => {\n  if (event.key === SIDEBAR_KEYBOARD_SHORTCUT && (event.metaKey || event.ctrlKey)) {\n    event.preventDefault()\n    toggleSidebar()\n  }\n})\n\n// We add a state so that we can do data-state=\"expanded\" or \"collapsed\".\n// This makes it easier to style the sidebar with Tailwind classes.\nconst state = computed(() => open.value ? 'expanded' : 'collapsed')\n\nprovideSidebarContext({\n  state,\n  open,\n  setOpen,\n  isMobile,\n  openMobile,\n  setOpenMobile,\n  toggleSidebar,\n})\n</script>\n\n<template>\n  <TooltipProvider :delay-duration=\"0\">\n    <div\n      :style=\"{\n        '--sidebar-width': SIDEBAR_WIDTH,\n        '--sidebar-width-icon': SIDEBAR_WIDTH_ICON,\n      }\"\n      :class=\"cn('group/sidebar-wrapper flex min-h-svh w-full text-sidebar-foreground has-[[data-variant=inset]]:bg-sidebar', props.class)\"\n      v-bind=\"$attrs\"\n    >\n      <slot />\n    </div>\n  </TooltipProvider>\n</template>\n",
+        "content": "<script setup lang=\"ts\">\nimport { cn } from '@/lib/utils'\nimport { useEventListener, useMediaQuery, useVModel } from '@vueuse/core'\nimport { TooltipProvider } from 'reka-ui'\nimport { computed, type HTMLAttributes, type Ref, ref } from 'vue'\nimport { provideSidebarContext, SIDEBAR_COOKIE_MAX_AGE, SIDEBAR_COOKIE_NAME, SIDEBAR_KEYBOARD_SHORTCUT, SIDEBAR_WIDTH, SIDEBAR_WIDTH_ICON } from './utils'\n\nconst props = withDefaults(defineProps<{\n  defaultOpen?: boolean\n  open?: boolean\n  class?: HTMLAttributes['class']\n}>(), {\n  defaultOpen: true,\n  open: undefined,\n})\n\nconst emits = defineEmits<{\n  'update:open': [open: boolean]\n}>()\n\nconst isMobile = useMediaQuery('(max-width: 768px)')\nconst openMobile = ref(false)\n\nconst open = useVModel(props, 'open', emits, {\n  defaultValue: props.defaultOpen ?? false,\n  passive: (props.open === undefined) as false,\n}) as Ref<boolean>\n\nfunction setOpen(value: boolean) {\n  open.value = value // emits('update:open', value)\n\n  // This sets the cookie to keep the sidebar state.\n  document.cookie = `${SIDEBAR_COOKIE_NAME}=${open.value}; path=/; max-age=${SIDEBAR_COOKIE_MAX_AGE}`\n}\n\nfunction setOpenMobile(value: boolean) {\n  openMobile.value = value\n}\n\n// Helper to toggle the sidebar.\nfunction toggleSidebar() {\n  return isMobile.value ? setOpenMobile(!openMobile.value) : setOpen(!open.value)\n}\n\nuseEventListener('keydown', (event: KeyboardEvent) => {\n  if (event.key === SIDEBAR_KEYBOARD_SHORTCUT && (event.metaKey || event.ctrlKey)) {\n    event.preventDefault()\n    toggleSidebar()\n  }\n})\n\n// We add a state so that we can do data-state=\"expanded\" or \"collapsed\".\n// This makes it easier to style the sidebar with Tailwind classes.\nconst state = computed(() => open.value ? 'expanded' : 'collapsed')\n\nprovideSidebarContext({\n  state,\n  open,\n  setOpen,\n  isMobile,\n  openMobile,\n  setOpenMobile,\n  toggleSidebar,\n})\n</script>\n\n<template>\n  <TooltipProvider :delay-duration=\"0\">\n    <div\n      :style=\"{\n        '--sidebar-width': SIDEBAR_WIDTH,\n        '--sidebar-width-icon': SIDEBAR_WIDTH_ICON,\n      }\"\n      :class=\"cn('group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar', props.class)\"\n      v-bind=\"$attrs\"\n    >\n      <slot />\n    </div>\n  </TooltipProvider>\n</template>\n",
         "type": "registry:ui",
         "target": ""
       },
@@ -14048,7 +14075,8 @@
         "type": "registry:block",
         "target": "pages/dashboard/index.vue"
       }
-    ]
+    ],
+    "category": "authentication"
   },
   {
     "name": "Authentication02",
@@ -14067,7 +14095,8 @@
         "type": "registry:block",
         "target": "pages/dashboard/index.vue"
       }
-    ]
+    ],
+    "category": "authentication"
   },
   {
     "name": "Authentication03",
@@ -14086,7 +14115,8 @@
         "type": "registry:block",
         "target": "pages/dashboard/index.vue"
       }
-    ]
+    ],
+    "category": "authentication"
   },
   {
     "name": "Authentication04",
@@ -14104,7 +14134,8 @@
         "type": "registry:block",
         "target": "pages/dashboard/index.vue"
       }
-    ]
+    ],
+    "category": "authentication"
   },
   {
     "name": "Dashboard01",
@@ -14127,7 +14158,8 @@
         "type": "registry:block",
         "target": "pages/dashboard/index.vue"
       }
-    ]
+    ],
+    "category": "dashboard"
   },
   {
     "name": "Dashboard02",
@@ -14148,7 +14180,8 @@
         "type": "registry:block",
         "target": "pages/dashboard/index.vue"
       }
-    ]
+    ],
+    "category": "dashboard"
   },
   {
     "name": "Dashboard03",
@@ -14171,7 +14204,8 @@
         "type": "registry:block",
         "target": "pages/dashboard/index.vue"
       }
-    ]
+    ],
+    "category": "dashboard"
   },
   {
     "name": "Dashboard04",
@@ -14192,7 +14226,8 @@
         "type": "registry:block",
         "target": "pages/dashboard/index.vue"
       }
-    ]
+    ],
+    "category": "dashboard"
   },
   {
     "name": "Dashboard05",
@@ -14221,7 +14256,8 @@
         "type": "registry:block",
         "target": "pages/dashboard/index.vue"
       }
-    ]
+    ],
+    "category": "dashboard"
   },
   {
     "name": "Dashboard06",
@@ -14246,7 +14282,8 @@
         "type": "registry:block",
         "target": "pages/dashboard/index.vue"
       }
-    ]
+    ],
+    "category": "dashboard"
   },
   {
     "name": "Dashboard07",
@@ -14274,7 +14311,8 @@
         "type": "registry:block",
         "target": "pages/dashboard/index.vue"
       }
-    ]
+    ],
+    "category": "dashboard"
   },
   {
     "name": "DemoSidebar",
@@ -14499,7 +14537,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "login"
   },
   {
     "name": "Sidebar01",
@@ -14537,7 +14576,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar02",
@@ -14576,7 +14616,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar03",
@@ -14600,7 +14641,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar04",
@@ -14624,7 +14666,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar05",
@@ -14656,7 +14699,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar06",
@@ -14697,7 +14741,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar07",
@@ -14748,7 +14793,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar08",
@@ -14799,7 +14845,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar09",
@@ -14833,7 +14880,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar10",
@@ -14897,7 +14945,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar11",
@@ -14928,7 +14977,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar12",
@@ -14974,7 +15024,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar13",
@@ -14999,7 +15050,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar14",
@@ -15022,7 +15074,8 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   },
   {
     "name": "Sidebar15",
@@ -15110,6 +15163,7 @@
         "type": "registry:component",
         "target": ""
       }
-    ]
+    ],
+    "category": "sidebar"
   }
 ]
