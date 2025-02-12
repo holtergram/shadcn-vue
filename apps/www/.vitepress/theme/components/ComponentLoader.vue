@@ -14,12 +14,19 @@ const styleIndex = Index[style.value]
 const componentRegistry = styleIndex[props.name]
 
 const Component = defineAsyncComponent({
-  loadingComponent: Spinner,
   loader: componentRegistry.component,
   timeout: 5000,
 })
 </script>
 
 <template>
-  <Component :is="Component" />
+  <Suspense>
+    <Component :is="Component" />
+
+    <template #fallback>
+      <div class="w-full h-screen flex items-center justify-center">
+        <Spinner />
+      </div>
+    </template>
+  </Suspense>
 </template>

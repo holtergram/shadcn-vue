@@ -9,7 +9,7 @@ const params = useUrlSearchParams('history')
 <template>
   <div
     v-if="params.name"
-    :class="cn('preview flex h-screen w-full justify-center items-center', params.containerClass)"
+    :class="cn('relative flex min-h-svh flex-col bg-background', params.containerClass)"
   >
     <ComponentLoader :key="params.style?.toString()" :name="params.name?.toString()" :type-name="'block'" />
   </div>

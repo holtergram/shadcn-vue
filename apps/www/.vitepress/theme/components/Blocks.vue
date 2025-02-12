@@ -14,7 +14,6 @@ import BlocksNav from './BlocksNav.vue'
 
 const FEATURED_BLOCKS = ['Sidebar07', 'Sidebar03', 'Login03', 'Login04']
 
-// params is a Vue ref
 const { params } = useData()
 
 const blocks = computed(() => {
@@ -25,7 +24,6 @@ const blocks = computed(() => {
     return params.value.blocks ?? []
   }
 })
-console.log(params)
 </script>
 
 <template>

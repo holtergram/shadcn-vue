@@ -10,7 +10,7 @@ import LoginForm from '@/registry/default/block/Login01/components/LoginForm.vue
 </script>
 
 <template>
-  <div className="flex h-screen w-full items-center justify-center px-4">
+  <div class="flex h-screen w-full items-center justify-center px-4">
     <LoginForm />
   </div>
 </template>

@@ -417,6 +417,94 @@ export const Index: Record<string, any> = {
       category: "login",
       subcategory: ""
     },
+    "Login02": {
+      name: "Login02",
+      description: "",
+      type: "registry:block",
+      registryDependencies: ["utils","button","input","label"],
+      files: [{
+        path: "registry/new-york/block/Login02/page.vue",
+        type: "registry:page",
+        target: "pages/dashboard/index.vue",
+        raw: () => import("@/registry/new-york/block/Login02/page.vue?raw").then((m) => m.default)
+      },{
+        path: "registry/new-york/block/Login02/components/LoginForm.vue",
+        type: "registry:component",
+        target: "",
+        raw: () => import("@/registry/new-york/block/Login02/components/LoginForm.vue?raw").then((m) => m.default)
+      }],
+      component: () => import("@/registry/new-york/block/Login02/page.vue").then((m) => m.default),
+      raw: () => import("@/registry/new-york/block/Login02/page.vue?raw").then((m) => m.default),
+      source: "",
+      category: "login",
+      subcategory: ""
+    },
+    "Login03": {
+      name: "Login03",
+      description: "",
+      type: "registry:block",
+      registryDependencies: ["button","card","input","label"],
+      files: [{
+        path: "registry/new-york/block/Login03/page.vue",
+        type: "registry:page",
+        target: "pages/dashboard/index.vue",
+        raw: () => import("@/registry/new-york/block/Login03/page.vue?raw").then((m) => m.default)
+      },{
+        path: "registry/new-york/block/Login03/components/LoginForm.vue",
+        type: "registry:component",
+        target: "",
+        raw: () => import("@/registry/new-york/block/Login03/components/LoginForm.vue?raw").then((m) => m.default)
+      }],
+      component: () => import("@/registry/new-york/block/Login03/page.vue").then((m) => m.default),
+      raw: () => import("@/registry/new-york/block/Login03/page.vue?raw").then((m) => m.default),
+      source: "",
+      category: "login",
+      subcategory: ""
+    },
+    "Login04": {
+      name: "Login04",
+      description: "",
+      type: "registry:block",
+      registryDependencies: ["button","card","input","label"],
+      files: [{
+        path: "registry/new-york/block/Login04/page.vue",
+        type: "registry:page",
+        target: "pages/dashboard/index.vue",
+        raw: () => import("@/registry/new-york/block/Login04/page.vue?raw").then((m) => m.default)
+      },{
+        path: "registry/new-york/block/Login04/components/LoginForm.vue",
+        type: "registry:component",
+        target: "",
+        raw: () => import("@/registry/new-york/block/Login04/components/LoginForm.vue?raw").then((m) => m.default)
+      }],
+      component: () => import("@/registry/new-york/block/Login04/page.vue").then((m) => m.default),
+      raw: () => import("@/registry/new-york/block/Login04/page.vue?raw").then((m) => m.default),
+      source: "",
+      category: "login",
+      subcategory: ""
+    },
+    "Login05": {
+      name: "Login05",
+      description: "",
+      type: "registry:block",
+      registryDependencies: ["button","input","label"],
+      files: [{
+        path: "registry/new-york/block/Login05/page.vue",
+        type: "registry:page",
+        target: "pages/dashboard/index.vue",
+        raw: () => import("@/registry/new-york/block/Login05/page.vue?raw").then((m) => m.default)
+      },{
+        path: "registry/new-york/block/Login05/components/LoginForm.vue",
+        type: "registry:component",
+        target: "",
+        raw: () => import("@/registry/new-york/block/Login05/components/LoginForm.vue?raw").then((m) => m.default)
+      }],
+      component: () => import("@/registry/new-york/block/Login05/page.vue").then((m) => m.default),
+      raw: () => import("@/registry/new-york/block/Login05/page.vue?raw").then((m) => m.default),
+      source: "",
+      category: "login",
+      subcategory: ""
+    },
     "Sidebar01": {
       name: "Sidebar01",
       description: "",
@@ -1336,6 +1424,94 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/new-york/block/Login01/page.vue").then((m) => m.default),
       raw: () => import("@/registry/new-york/block/Login01/page.vue?raw").then((m) => m.default),
+      source: "",
+      category: "login",
+      subcategory: ""
+    },
+    "Login02": {
+      name: "Login02",
+      description: "",
+      type: "registry:block",
+      registryDependencies: ["utils","button","input","label"],
+      files: [{
+        path: "registry/new-york/block/Login02/page.vue",
+        type: "registry:page",
+        target: "pages/dashboard/index.vue",
+        raw: () => import("@/registry/new-york/block/Login02/page.vue?raw").then((m) => m.default)
+      },{
+        path: "registry/new-york/block/Login02/components/LoginForm.vue",
+        type: "registry:component",
+        target: "",
+        raw: () => import("@/registry/new-york/block/Login02/components/LoginForm.vue?raw").then((m) => m.default)
+      }],
+      component: () => import("@/registry/new-york/block/Login02/page.vue").then((m) => m.default),
+      raw: () => import("@/registry/new-york/block/Login02/page.vue?raw").then((m) => m.default),
+      source: "",
+      category: "login",
+      subcategory: ""
+    },
+    "Login03": {
+      name: "Login03",
+      description: "",
+      type: "registry:block",
+      registryDependencies: ["button","card","input","label"],
+      files: [{
+        path: "registry/new-york/block/Login03/page.vue",
+        type: "registry:page",
+        target: "pages/dashboard/index.vue",
+        raw: () => import("@/registry/new-york/block/Login03/page.vue?raw").then((m) => m.default)
+      },{
+        path: "registry/new-york/block/Login03/components/LoginForm.vue",
+        type: "registry:component",
+        target: "",
+        raw: () => import("@/registry/new-york/block/Login03/components/LoginForm.vue?raw").then((m) => m.default)
+      }],
+      component: () => import("@/registry/new-york/block/Login03/page.vue").then((m) => m.default),
+      raw: () => import("@/registry/new-york/block/Login03/page.vue?raw").then((m) => m.default),
+      source: "",
+      category: "login",
+      subcategory: ""
+    },
+    "Login04": {
+      name: "Login04",
+      description: "",
+      type: "registry:block",
+      registryDependencies: ["button","card","input","label"],
+      files: [{
+        path: "registry/new-york/block/Login04/page.vue",
+        type: "registry:page",
+        target: "pages/dashboard/index.vue",
+        raw: () => import("@/registry/new-york/block/Login04/page.vue?raw").then((m) => m.default)
+      },{
+        path: "registry/new-york/block/Login04/components/LoginForm.vue",
+        type: "registry:component",
+        target: "",
+        raw: () => import("@/registry/new-york/block/Login04/components/LoginForm.vue?raw").then((m) => m.default)
+      }],
+      component: () => import("@/registry/new-york/block/Login04/page.vue").then((m) => m.default),
+      raw: () => import("@/registry/new-york/block/Login04/page.vue?raw").then((m) => m.default),
+      source: "",
+      category: "login",
+      subcategory: ""
+    },
+    "Login05": {
+      name: "Login05",
+      description: "",
+      type: "registry:block",
+      registryDependencies: ["button","input","label"],
+      files: [{
+        path: "registry/new-york/block/Login05/page.vue",
+        type: "registry:page",
+        target: "pages/dashboard/index.vue",
+        raw: () => import("@/registry/new-york/block/Login05/page.vue?raw").then((m) => m.default)
+      },{
+        path: "registry/new-york/block/Login05/components/LoginForm.vue",
+        type: "registry:component",
+        target: "",
+        raw: () => import("@/registry/new-york/block/Login05/components/LoginForm.vue?raw").then((m) => m.default)
+      }],
+      component: () => import("@/registry/new-york/block/Login05/page.vue").then((m) => m.default),
+      raw: () => import("@/registry/new-york/block/Login05/page.vue?raw").then((m) => m.default),
       source: "",
       category: "login",
       subcategory: ""
@@ -2264,6 +2440,94 @@ export const Index: Record<string, any> = {
       category: "login",
       subcategory: ""
     },
+    "Login02": {
+      name: "Login02",
+      description: "",
+      type: "registry:block",
+      registryDependencies: ["utils","button","input","label"],
+      files: [{
+        path: "registry/default/block/Login02/page.vue",
+        type: "registry:page",
+        target: "pages/dashboard/index.vue",
+        raw: () => import("@/registry/default/block/Login02/page.vue?raw").then((m) => m.default)
+      },{
+        path: "registry/default/block/Login02/components/LoginForm.vue",
+        type: "registry:component",
+        target: "",
+        raw: () => import("@/registry/default/block/Login02/components/LoginForm.vue?raw").then((m) => m.default)
+      }],
+      component: () => import("@/registry/default/block/Login02/page.vue").then((m) => m.default),
+      raw: () => import("@/registry/default/block/Login02/page.vue?raw").then((m) => m.default),
+      source: "",
+      category: "login",
+      subcategory: ""
+    },
+    "Login03": {
+      name: "Login03",
+      description: "",
+      type: "registry:block",
+      registryDependencies: ["button","card","input","label"],
+      files: [{
+        path: "registry/default/block/Login03/page.vue",
+        type: "registry:page",
+        target: "pages/dashboard/index.vue",
+        raw: () => import("@/registry/default/block/Login03/page.vue?raw").then((m) => m.default)
+      },{
+        path: "registry/default/block/Login03/components/LoginForm.vue",
+        type: "registry:component",
+        target: "",
+        raw: () => import("@/registry/default/block/Login03/components/LoginForm.vue?raw").then((m) => m.default)
+      }],
+      component: () => import("@/registry/default/block/Login03/page.vue").then((m) => m.default),
+      raw: () => import("@/registry/default/block/Login03/page.vue?raw").then((m) => m.default),
+      source: "",
+      category: "login",
+      subcategory: ""
+    },
+    "Login04": {
+      name: "Login04",
+      description: "",
+      type: "registry:block",
+      registryDependencies: ["button","card","input","label"],
+      files: [{
+        path: "registry/default/block/Login04/page.vue",
+        type: "registry:page",
+        target: "pages/dashboard/index.vue",
+        raw: () => import("@/registry/default/block/Login04/page.vue?raw").then((m) => m.default)
+      },{
+        path: "registry/default/block/Login04/components/LoginForm.vue",
+        type: "registry:component",
+        target: "",
+        raw: () => import("@/registry/default/block/Login04/components/LoginForm.vue?raw").then((m) => m.default)
+      }],
+      component: () => import("@/registry/default/block/Login04/page.vue").then((m) => m.default),
+      raw: () => import("@/registry/default/block/Login04/page.vue?raw").then((m) => m.default),
+      source: "",
+      category: "login",
+      subcategory: ""
+    },
+    "Login05": {
+      name: "Login05",
+      description: "",
+      type: "registry:block",
+      registryDependencies: ["button","input","label"],
+      files: [{
+        path: "registry/default/block/Login05/page.vue",
+        type: "registry:page",
+        target: "pages/dashboard/index.vue",
+        raw: () => import("@/registry/default/block/Login05/page.vue?raw").then((m) => m.default)
+      },{
+        path: "registry/default/block/Login05/components/LoginForm.vue",
+        type: "registry:component",
+        target: "",
+        raw: () => import("@/registry/default/block/Login05/components/LoginForm.vue?raw").then((m) => m.default)
+      }],
+      component: () => import("@/registry/default/block/Login05/page.vue").then((m) => m.default),
+      raw: () => import("@/registry/default/block/Login05/page.vue?raw").then((m) => m.default),
+      source: "",
+      category: "login",
+      subcategory: ""
+    },
     "Sidebar01": {
       name: "Sidebar01",
       description: "",
@@ -3183,6 +3447,94 @@ export const Index: Record<string, any> = {
       }],
       component: () => import("@/registry/default/block/Login01/page.vue").then((m) => m.default),
       raw: () => import("@/registry/default/block/Login01/page.vue?raw").then((m) => m.default),
+      source: "",
+      category: "login",
+      subcategory: ""
+    },
+    "Login02": {
+      name: "Login02",
+      description: "",
+      type: "registry:block",
+      registryDependencies: ["utils","button","input","label"],
+      files: [{
+        path: "registry/default/block/Login02/page.vue",
+        type: "registry:page",
+        target: "pages/dashboard/index.vue",
+        raw: () => import("@/registry/default/block/Login02/page.vue?raw").then((m) => m.default)
+      },{
+        path: "registry/default/block/Login02/components/LoginForm.vue",
+        type: "registry:component",
+        target: "",
+        raw: () => import("@/registry/default/block/Login02/components/LoginForm.vue?raw").then((m) => m.default)
+      }],
+      component: () => import("@/registry/default/block/Login02/page.vue").then((m) => m.default),
+      raw: () => import("@/registry/default/block/Login02/page.vue?raw").then((m) => m.default),
+      source: "",
+      category: "login",
+      subcategory: ""
+    },
+    "Login03": {
+      name: "Login03",
+      description: "",
+      type: "registry:block",
+      registryDependencies: ["button","card","input","label"],
+      files: [{
+        path: "registry/default/block/Login03/page.vue",
+        type: "registry:page",
+        target: "pages/dashboard/index.vue",
+        raw: () => import("@/registry/default/block/Login03/page.vue?raw").then((m) => m.default)
+      },{
+        path: "registry/default/block/Login03/components/LoginForm.vue",
+        type: "registry:component",
+        target: "",
+        raw: () => import("@/registry/default/block/Login03/components/LoginForm.vue?raw").then((m) => m.default)
+      }],
+      component: () => import("@/registry/default/block/Login03/page.vue").then((m) => m.default),
+      raw: () => import("@/registry/default/block/Login03/page.vue?raw").then((m) => m.default),
+      source: "",
+      category: "login",
+      subcategory: ""
+    },
+    "Login04": {
+      name: "Login04",
+      description: "",
+      type: "registry:block",
+      registryDependencies: ["button","card","input","label"],
+      files: [{
+        path: "registry/default/block/Login04/page.vue",
+        type: "registry:page",
+        target: "pages/dashboard/index.vue",
+        raw: () => import("@/registry/default/block/Login04/page.vue?raw").then((m) => m.default)
+      },{
+        path: "registry/default/block/Login04/components/LoginForm.vue",
+        type: "registry:component",
+        target: "",
+        raw: () => import("@/registry/default/block/Login04/components/LoginForm.vue?raw").then((m) => m.default)
+      }],
+      component: () => import("@/registry/default/block/Login04/page.vue").then((m) => m.default),
+      raw: () => import("@/registry/default/block/Login04/page.vue?raw").then((m) => m.default),
+      source: "",
+      category: "login",
+      subcategory: ""
+    },
+    "Login05": {
+      name: "Login05",
+      description: "",
+      type: "registry:block",
+      registryDependencies: ["button","input","label"],
+      files: [{
+        path: "registry/default/block/Login05/page.vue",
+        type: "registry:page",
+        target: "pages/dashboard/index.vue",
+        raw: () => import("@/registry/default/block/Login05/page.vue?raw").then((m) => m.default)
+      },{
+        path: "registry/default/block/Login05/components/LoginForm.vue",
+        type: "registry:component",
+        target: "",
+        raw: () => import("@/registry/default/block/Login05/components/LoginForm.vue?raw").then((m) => m.default)
+      }],
+      component: () => import("@/registry/default/block/Login05/page.vue").then((m) => m.default),
+      raw: () => import("@/registry/default/block/Login05/page.vue?raw").then((m) => m.default),
       source: "",
       category: "login",
       subcategory: ""

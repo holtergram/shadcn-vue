@@ -110,7 +110,7 @@ watch([style, codeConfig], async () => {
     v-model="tabValue"
     class="group/block-view-wrapper flex min-w-0 flex-col items-stretch gap-4"
     :style=" {
-      '--height': metadata.iframeHeight ?? '600px',
+      '--height': metadata.iframeHeight ?? '930px',
     }"
   >
     <div class="flex flex-col items-center gap-4 sm:flex-row">
